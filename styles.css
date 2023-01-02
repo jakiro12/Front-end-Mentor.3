@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Inter-VariableFont_slnt';
+    src: url(/assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+body{
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: 10% 90%;
+    font-family: 'Inter-VariableFont_slnt';
+}
+.links_to{
+    height: fit-content;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin:auto ;
+}
+.principal_content{
+    height: auto;
+    margin-inline:auto ;
+    width: 80%;
+}
+.linkeds{
+    width: 40%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.linkeds a{
+    color: gray;
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: none;
+}
+.big_news{
+    height: 70%;
+    width: auto;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    
+
+}
+.other_news{
+    margin-top:2% ;
+    height: 28%;
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+}
+.other_news > div{
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.other_news div img{
+    width: 30%;
+    height: 80%;
+}
+.info_other_news{
+    width: 60%;
+    height: 80%;
+    display: grid;
+}
+.description_info{
+    font-size: 15px;
+    color:  gray;
+}
+.type_description{
+    font-weight: 600;
+}
+.info_number{
+    color: gray;
+    font-size: 28px;
+}
+.dateline{
+    border: 2px solid black;
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-rows: 15% 85%;
+    padding: 4%;
+    background-color:   hsl(240, 100%, 5%);
+
+}
+.line_title{
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 5%;
+    color: hsl(35, 77%, 62%);
+}
+.dateline_info{
+    width: auto;
+    height: auto;
+    display: grid;
+    align-content: space-around;
+}
+.dateline_info hr{
+    height: 1px;
+    background-color: hsl(233, 8%, 79%);
+    border: none;
+    opacity: 0.5;
+}
+.dateline_info h3{
+    color: white;
+}
+.info_column_text{
+    font-size: 14;
+    color:  hsl(233, 8%, 79%);
+}
+.big_info{
+    width: 95%;
+    display: grid;
+    grid-template-rows: 0.9fr 0.7fr;
+    grid-template-columns: 1fr;
+    max-height: 100%;
+    align-content: space-between;
+}
+.images{
+    width: 100%;
+    height: 200px;
+
+}
+.imga{
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+.description_img{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.description_img > h1{
+    width: 35%;
+    text-align: left;
+    height: 90%;
+    font-size: 40px;
+    padding-top: 2%;
+}
+.description_img > div{
+    padding-top: 2%;
+    width: 45%;
+    height: 90%;
+    display: grid;
+    align-content: space-between;
+}
+.more_info button{
+    width: 50%;
+    background-color:hsl(5, 85%, 63%);
+    color: white;
+    height: 35px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    letter-spacing: 3px;
+    border: none;
+}
+.more_info p{
+    font-size: 15px;
+    color: gray;
+    font-weight: 700;
+}
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+.bar{
+    display: none;
+}
+@media screen and (max-width:400px) {
+    body{
+        height: 300vh;
+        grid-template-rows: 5% 90%;
+
+    }
+    .principal_content{
+        width: 90%;
+    }
+    .big_news{
+        height: 50%;
+        width: auto;
+        display: grid;
+        grid-template-columns:repeat(1,1fr);
+        row-gap: 20px;
+    }
+    .big_info{
+        grid-template-rows: auto;
+       
+    }
+    .description_img{
+        display: grid;
+    }
+    .description_img > h1, .description_img > div{
+        height: 35%;
+        width: 90%;
+    }
+    .linkeds{
+        display: none;
+    }
+    .links_to{
+        position: relative;
+    }
+    .toggle-button{
+        display: flex;
+    }
+    .bar{
+        display: grid;
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 70%;
+        visibility: hidden;
+        align-content: center;
+        background-color: white;
+        box-shadow:         0px 0px 400px 10px rgba(0,0,0,0.5);
+    }
+    .bar > a{
+        text-decoration: none;
+        font-size: 20px;
+        color: black;
+        margin-top: 4%;
+        margin-left: 10%;
+    }
+    button{
+        margin-top: 4%;
+    }
+  
+}
