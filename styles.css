@@ -240,5 +240,7 @@ body{
     button{
         margin-top: 4%;
     }
-  
+   .close{
+    display: block;
+   }
 }
